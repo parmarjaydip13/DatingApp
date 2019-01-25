@@ -17,7 +17,11 @@
         <i class="fa fa-heart" (click)="sendLike(user.id)"></i>
       </li>
 
-      <li class="list-inline-item btn btn-primary">
+      <li
+        class="list-inline-item btn btn-primary"
+        [routerLink]="['/members/', user.id]"
+        [queryParams]="{ tab: 3 }"
+      >
         <i class="fa fa-envelope"></i>
       </li>
     </ul>
